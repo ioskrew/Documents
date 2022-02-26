@@ -16,6 +16,7 @@
 		74676A9F27C9D035008DF189 /* DocumentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A9E27C9D035008DF189 /* DocumentsTests.swift */; };
 		74676AA927C9D035008DF189 /* DocumentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AA827C9D035008DF189 /* DocumentsUITests.swift */; };
 		74676AAB27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AAA27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift */; };
+		74676AB927C9D35C008DF189 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 74676AB827C9D35C008DF189 /* SwiftLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74676AB927C9D35C008DF189 /* SwiftLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +151,9 @@
 			dependencies = (
 			);
 			name = Documents;
+			packageProductDependencies = (
+				74676AB827C9D35C008DF189 /* SwiftLayout */,
+			);
 			productName = Documents;
 			productReference = 74676A8527C9D033008DF189 /* Documents.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 74676A7C27C9D033008DF189;
+			packageReferences = (
+				74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */,
+			);
 			productRefGroup = 74676A8627C9D033008DF189 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74676AB827C9D35C008DF189 /* SwiftLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */;
+			productName = SwiftLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		74676A9327C9D035008DF189 /* Documents.xcdatamodeld */ = {
