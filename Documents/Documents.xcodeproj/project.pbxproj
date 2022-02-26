@@ -17,6 +17,8 @@
 		74676AA927C9D035008DF189 /* DocumentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AA827C9D035008DF189 /* DocumentsUITests.swift */; };
 		74676AAB27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AAA27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift */; };
 		74676AB927C9D35C008DF189 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 74676AB827C9D35C008DF189 /* SwiftLayout */; };
+		74676ABB27C9D479008DF189 /* DocumentContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABA27C9D479008DF189 /* DocumentContentView.swift */; };
+		74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABC27C9D484008DF189 /* DocumentMemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		74676AA427C9D035008DF189 /* DocumentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DocumentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74676AA827C9D035008DF189 /* DocumentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsUITests.swift; sourceTree = "<group>"; };
 		74676AAA27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74676ABA27C9D479008DF189 /* DocumentContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentContentView.swift; sourceTree = "<group>"; };
+		74676ABC27C9D484008DF189 /* DocumentMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			children = (
 				74676A8827C9D033008DF189 /* DocumentsApp.swift */,
 				74676A8A27C9D033008DF189 /* ContentView.swift */,
+				74676ABA27C9D479008DF189 /* DocumentContentView.swift */,
+				74676ABC27C9D484008DF189 /* DocumentMemoView.swift */,
 				74676A8C27C9D035008DF189 /* Assets.xcassets */,
 				74676A9127C9D035008DF189 /* Persistence.swift */,
 				74676A9327C9D035008DF189 /* Documents.xcdatamodeld */,
@@ -271,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74676ABB27C9D479008DF189 /* DocumentContentView.swift in Sources */,
 				74676A9527C9D035008DF189 /* Documents.xcdatamodeld in Sources */,
 				74676A9227C9D035008DF189 /* Persistence.swift in Sources */,
+				74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */,
 				74676A8B27C9D033008DF189 /* ContentView.swift in Sources */,
 				74676A8927C9D033008DF189 /* DocumentsApp.swift in Sources */,
 			);

@@ -15,10 +15,13 @@ final class MainViewController: UIViewController, LayoutBuilding {
     
     var layout: some Layout {
         view {
-            UIView().config { view in
-                view.backgroundColor = .yellow
-            }.anchors {
-                Anchors.allSides()
+            DocumentContentView().identifying("document").anchors {
+                Anchors.cap()
+                Anchors(.height).equalTo(view).setMultiplier(0.7)
+            }
+            DocumentMemoView().anchors {
+                Anchors(.top).equalTo("document", attribute: .bottom)
+                Anchors.shoe()
             }
         }
     }
