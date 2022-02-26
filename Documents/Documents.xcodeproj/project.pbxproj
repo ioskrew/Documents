@@ -623,7 +623,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
 			requirement = {
-				branch = main;
+				branch = "improve-updating";
 				kind = branch;
 			};
 		};

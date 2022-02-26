@@ -15,21 +15,33 @@ final class MainViewController: UIViewController, LayoutBuilding {
     var deactivable: Deactivable?
     
     lazy var contentView = DocumentContentView()
+    lazy var scroller = DocumentScroller()
+    lazy var memoView = DocumentMemoView()
+    
+    var contentMultiplier: CGFloat = 0.6
+    var hideBottom: Bool { contentMultiplier == 1.0 }
     
     var layout: some Layout {
         view {
             contentView.identifying("document").anchors {
                 Anchors.cap()
-                Anchors(.height).equalTo(view).setMultiplier(0.6)
+                Anchors(.height).equalTo(view).setMultiplier(contentMultiplier)
             }
-            DocumentScroller().identifying("scroller").anchors {
+            scroller.config({ view in
+                view.isHidden = hideBottom
+            }).identifying("scroller").anchors {
                 Anchors(.top).equalTo("document", attribute: .bottom)
                 Anchors.horizontal()
-                Anchors(.height).equalTo(constant: 44)
+                Anchors(.height).equalTo(constant: hideBottom ? 0.0 : 44.0)
             }
-            DocumentMemoView().anchors {
+            memoView.config({ view in
+                view.isHidden = hideBottom
+            }).anchors {
                 Anchors(.top).equalTo("scroller", attribute: .bottom)
                 Anchors.shoe()
+                if hideBottom {
+                    Anchors(.height).equalTo(constant: .zero)
+                }
             }
         }
     }
@@ -43,6 +55,19 @@ final class MainViewController: UIViewController, LayoutBuilding {
         contentView.requestDocumentAction.sink { [weak self] in
             self?.showDocumentCamera()
         }.store(in: &stores)
+        
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(extendingContent)))
+    }
+    
+    @objc
+    func extendingContent() {
+        if contentView.image == nil { return }
+        if contentMultiplier == 1.0 {
+            contentMultiplier = 0.6
+        } else {
+            contentMultiplier = 1.0
+        }
+        updateLayout(animated: true)
     }
     
     func showDocumentCamera() {
