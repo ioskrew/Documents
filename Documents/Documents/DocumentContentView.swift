@@ -52,16 +52,8 @@ class DocumentContentView: UIView, LayoutBuilding {
             backgroundView.anchors {
                 Anchors.allSides()
             }
-            if VNDocumentCameraViewController.isSupported {
-                toggleButton.anchors {
-                    Anchors.allSides()
-                }
-            } else {
-                UILabel().config { label in
-                    label.text = "unable capture document"
-                }.anchors {
-                    Anchors(.centerX, .centerY)
-                }
+            toggleButton.anchors {
+                Anchors.allSides()
             }
         }
     }
