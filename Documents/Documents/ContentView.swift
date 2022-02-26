@@ -47,9 +47,7 @@ final class MainViewController: UIViewController, LayoutBuilding {
     
     func showDocumentCamera() {
         let camera = FakeDocumentCameraViewController(nibName: nil, bundle: nil)
-        present(camera, animated: true) {
-            
-        }
+        present(camera, animated: true)
     }
     
     override var prefersStatusBarHidden: Bool { false }

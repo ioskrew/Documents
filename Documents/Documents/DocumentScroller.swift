@@ -14,6 +14,11 @@ class DocumentScroller: UIView, LayoutBuilding {
     
     var layout: some Layout {
         self {
+            UIView().config { view in
+                view.backgroundColor = .lightGray.withAlphaComponent(0.5)
+            }.anchors {
+                Anchors.allSides()
+            }
             UILabel().config { label in
                 label.text = "Scroller"
             }.anchors {
