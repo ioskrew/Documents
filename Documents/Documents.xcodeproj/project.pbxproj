@@ -20,6 +20,7 @@
 		74676ABB27C9D479008DF189 /* DocumentContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABA27C9D479008DF189 /* DocumentContentView.swift */; };
 		74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABC27C9D484008DF189 /* DocumentMemoView.swift */; };
 		74676ABF27C9E866008DF189 /* DocumentScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABE27C9E866008DF189 /* DocumentScroller.swift */; };
+		74676AC127CA119A008DF189 /* FakeDocumentCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AC027CA119A008DF189 /* FakeDocumentCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		74676ABA27C9D479008DF189 /* DocumentContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentContentView.swift; sourceTree = "<group>"; };
 		74676ABC27C9D484008DF189 /* DocumentMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMemoView.swift; sourceTree = "<group>"; };
 		74676ABE27C9E866008DF189 /* DocumentScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentScroller.swift; sourceTree = "<group>"; };
+		74676AC027CA119A008DF189 /* FakeDocumentCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDocumentCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				74676ABA27C9D479008DF189 /* DocumentContentView.swift */,
 				74676ABC27C9D484008DF189 /* DocumentMemoView.swift */,
 				74676ABE27C9E866008DF189 /* DocumentScroller.swift */,
+				74676AC027CA119A008DF189 /* FakeDocumentCameraViewController.swift */,
 				74676A8C27C9D035008DF189 /* Assets.xcassets */,
 				74676A9127C9D035008DF189 /* Persistence.swift */,
 				74676A9327C9D035008DF189 /* Documents.xcdatamodeld */,
@@ -287,6 +290,7 @@
 				74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */,
 				74676A8B27C9D033008DF189 /* ContentView.swift in Sources */,
 				74676A8927C9D033008DF189 /* DocumentsApp.swift in Sources */,
+				74676AC127CA119A008DF189 /* FakeDocumentCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
 //  Created by oozoofrog on 2022/02/26.
 //
 
+import Combine
 import SwiftLayout
 import SwiftUI
 import UIKit
@@ -13,9 +14,11 @@ final class MainViewController: UIViewController, LayoutBuilding {
     
     var deactivable: Deactivable?
     
+    lazy var contentView = DocumentContentView()
+    
     var layout: some Layout {
         view {
-            DocumentContentView().identifying("document").anchors {
+            contentView.identifying("document").anchors {
                 Anchors.cap()
                 Anchors(.height).equalTo(view).setMultiplier(0.6)
             }
@@ -31,10 +34,26 @@ final class MainViewController: UIViewController, LayoutBuilding {
         }
     }
     
+    var stores = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLayout()
+        
+        contentView.requestDocumentAction.sink { [weak self] in
+            self?.showDocumentCamera()
+        }.store(in: &stores)
     }
+    
+    func showDocumentCamera() {
+        let camera = FakeDocumentCameraViewController(nibName: nil, bundle: nil)
+        present(camera, animated: true) {
+            
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool { false }
+    override var prefersHomeIndicatorAutoHidden: Bool { false }
     
 }
 
