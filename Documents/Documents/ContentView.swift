@@ -17,10 +17,15 @@ final class MainViewController: UIViewController, LayoutBuilding {
         view {
             DocumentContentView().identifying("document").anchors {
                 Anchors.cap()
-                Anchors(.height).equalTo(view).setMultiplier(0.7)
+                Anchors(.height).equalTo(view).setMultiplier(0.6)
+            }
+            DocumentScroller().identifying("scroller").anchors {
+                Anchors(.top).equalTo("document", attribute: .bottom)
+                Anchors.horizontal()
+                Anchors(.height).equalTo(constant: 44)
             }
             DocumentMemoView().anchors {
-                Anchors(.top).equalTo("document", attribute: .bottom)
+                Anchors(.top).equalTo("scroller", attribute: .bottom)
                 Anchors.shoe()
             }
         }
