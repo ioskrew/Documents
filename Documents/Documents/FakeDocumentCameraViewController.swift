@@ -9,13 +9,19 @@ import UIKit
 import SwiftLayout
 import SwiftUI
 
+protocol FakeDocumentCameraViewDelegate: AnyObject {
+    func fakeDocumentCameraFinished(_ image: UIImage?)
+}
+
 class FakeDocumentCameraViewController: UIViewController {
 
+    weak var delegate: FakeDocumentCameraViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view {
-            UIImageView(image: UIImage(named: "documentcamera")).anchors {
+            UIImageView(image: UIImage(named: "camera")).anchors {
                 Anchors.allSides()
             }
         }.finalActive()
@@ -26,6 +32,11 @@ class FakeDocumentCameraViewController: UIViewController {
         super.viewDidAppear(animated)
         setNeedsStatusBarAppearanceUpdate()
         setNeedsUpdateOfHomeIndicatorAutoHidden()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.fakeDocumentCameraFinished(UIImage(named: "hunmin"))
+        super.viewWillDisappear(animated)
     }
     
     override var prefersStatusBarHidden: Bool { true }

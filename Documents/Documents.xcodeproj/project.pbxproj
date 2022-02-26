@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74676A8927C9D033008DF189 /* DocumentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A8827C9D033008DF189 /* DocumentsApp.swift */; };
-		74676A8B27C9D033008DF189 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A8A27C9D033008DF189 /* ContentView.swift */; };
+		74676A8B27C9D033008DF189 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A8A27C9D033008DF189 /* MainViewController.swift */; };
 		74676A8D27C9D035008DF189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74676A8C27C9D035008DF189 /* Assets.xcassets */; };
 		74676A9027C9D035008DF189 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74676A8F27C9D035008DF189 /* Preview Assets.xcassets */; };
 		74676A9227C9D035008DF189 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A9127C9D035008DF189 /* Persistence.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		74676A8527C9D033008DF189 /* Documents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Documents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74676A8827C9D033008DF189 /* DocumentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsApp.swift; sourceTree = "<group>"; };
-		74676A8A27C9D033008DF189 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74676A8A27C9D033008DF189 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		74676A8C27C9D035008DF189 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74676A8F27C9D035008DF189 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74676A9127C9D035008DF189 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				74676A8827C9D033008DF189 /* DocumentsApp.swift */,
-				74676A8A27C9D033008DF189 /* ContentView.swift */,
+				74676A8A27C9D033008DF189 /* MainViewController.swift */,
 				74676ABA27C9D479008DF189 /* DocumentContentView.swift */,
 				74676ABC27C9D484008DF189 /* DocumentMemoView.swift */,
 				74676ABE27C9E866008DF189 /* DocumentScroller.swift */,
@@ -288,7 +288,7 @@
 				74676A9527C9D035008DF189 /* Documents.xcdatamodeld in Sources */,
 				74676A9227C9D035008DF189 /* Persistence.swift in Sources */,
 				74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */,
-				74676A8B27C9D033008DF189 /* ContentView.swift in Sources */,
+				74676A8B27C9D033008DF189 /* MainViewController.swift in Sources */,
 				74676A8927C9D033008DF189 /* DocumentsApp.swift in Sources */,
 				74676AC127CA119A008DF189 /* FakeDocumentCameraViewController.swift in Sources */,
 			);

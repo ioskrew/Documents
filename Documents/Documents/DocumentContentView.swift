@@ -13,6 +13,12 @@ import VisionKit
 
 class DocumentContentView: UIView, LayoutBuilding {
     
+    var image: UIImage? {
+        didSet {
+            updateLayout()
+        }
+    }
+    
     var requestDocumentAction: AnyPublisher<Void, Never> {
         requestDocumentClickSubject.eraseToAnyPublisher()
     }
@@ -52,8 +58,14 @@ class DocumentContentView: UIView, LayoutBuilding {
             backgroundView.anchors {
                 Anchors.allSides()
             }
-            toggleButton.anchors {
-                Anchors.allSides()
+            if let image = image {
+                UIImageView(image: image).anchors {
+                    Anchors.allSides()
+                }
+            } else {
+                toggleButton.anchors {
+                    Anchors.allSides()
+                }
             }
         }
     }
