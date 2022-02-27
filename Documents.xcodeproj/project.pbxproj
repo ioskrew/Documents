@@ -16,11 +16,11 @@
 		74676A9F27C9D035008DF189 /* DocumentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676A9E27C9D035008DF189 /* DocumentsTests.swift */; };
 		74676AA927C9D035008DF189 /* DocumentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AA827C9D035008DF189 /* DocumentsUITests.swift */; };
 		74676AAB27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AAA27C9D035008DF189 /* DocumentsUITestsLaunchTests.swift */; };
-		74676AB927C9D35C008DF189 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 74676AB827C9D35C008DF189 /* SwiftLayout */; };
 		74676ABB27C9D479008DF189 /* DocumentContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABA27C9D479008DF189 /* DocumentContentView.swift */; };
 		74676ABD27C9D484008DF189 /* DocumentMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABC27C9D484008DF189 /* DocumentMemoView.swift */; };
 		74676ABF27C9E866008DF189 /* DocumentScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676ABE27C9E866008DF189 /* DocumentScroller.swift */; };
 		74676AC127CA119A008DF189 /* FakeDocumentCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74676AC027CA119A008DF189 /* FakeDocumentCameraViewController.swift */; };
+		74DC999A27CB62980034BACD /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 74DC999927CB62980034BACD /* SwiftLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +57,7 @@
 		74676ABC27C9D484008DF189 /* DocumentMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMemoView.swift; sourceTree = "<group>"; };
 		74676ABE27C9E866008DF189 /* DocumentScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentScroller.swift; sourceTree = "<group>"; };
 		74676AC027CA119A008DF189 /* FakeDocumentCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDocumentCameraViewController.swift; sourceTree = "<group>"; };
+		74C5DC3127CB622B003E36F8 /* SwiftLayout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftLayout; path = ../SwiftLayout; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74676AB927C9D35C008DF189 /* SwiftLayout in Frameworks */,
+				74DC999A27CB62980034BACD /* SwiftLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +89,12 @@
 		74676A7C27C9D033008DF189 = {
 			isa = PBXGroup;
 			children = (
+				74C5DC3027CB622B003E36F8 /* Packages */,
 				74676A8727C9D033008DF189 /* Documents */,
 				74676A9D27C9D035008DF189 /* DocumentsTests */,
 				74676AA727C9D035008DF189 /* DocumentsUITests */,
 				74676A8627C9D033008DF189 /* Products */,
+				74DC999827CB62980034BACD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +150,21 @@
 			path = DocumentsUITests;
 			sourceTree = "<group>";
 		};
+		74C5DC3027CB622B003E36F8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				74C5DC3127CB622B003E36F8 /* SwiftLayout */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		74DC999827CB62980034BACD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,7 +182,7 @@
 			);
 			name = Documents;
 			packageProductDependencies = (
-				74676AB827C9D35C008DF189 /* SwiftLayout */,
+				74DC999927CB62980034BACD /* SwiftLayout */,
 			);
 			productName = Documents;
 			productReference = 74676A8527C9D033008DF189 /* Documents.app */;
@@ -239,7 +257,6 @@
 			);
 			mainGroup = 74676A7C27C9D033008DF189;
 			packageReferences = (
-				74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */,
 			);
 			productRefGroup = 74676A8627C9D033008DF189 /* Products */;
 			projectDirPath = "";
@@ -618,21 +635,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
-			requirement = {
-				branch = "individual-animation-handler";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		74676AB827C9D35C008DF189 /* SwiftLayout */ = {
+		74DC999927CB62980034BACD /* SwiftLayout */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 74676AB727C9D35C008DF189 /* XCRemoteSwiftPackageReference "SwiftLayout" */;
 			productName = SwiftLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
