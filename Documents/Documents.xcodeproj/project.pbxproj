@@ -623,7 +623,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
 			requirement = {
-				branch = "improve-updating";
+				branch = "individual-animation-handler";
 				kind = branch;
 			};
 		};

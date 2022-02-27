@@ -27,20 +27,28 @@ final class MainViewController: UIViewController, LayoutBuilding {
                 Anchors.cap()
                 Anchors(.height).equalTo(view).setMultiplier(contentMultiplier)
             }
-            scroller.config({ view in
-                view.isHidden = hideBottom
+            scroller.setAnimationHandler({ [weak self] view in
+                guard let self = self else { return }
+                view.alpha = self.hideBottom ? 0.0 : 1.0
             }).identifying("scroller").anchors {
-                Anchors(.top).equalTo("document", attribute: .bottom)
+                if hideBottom {
+                    Anchors(.top).equalTo(view.bottomAnchor)
+                } else {
+                    Anchors(.top).equalTo("document", attribute: .bottom)
+                }
                 Anchors.horizontal()
                 Anchors(.height).equalTo(constant: hideBottom ? 0.0 : 44.0)
             }
-            memoView.config({ view in
-                view.isHidden = hideBottom
+            memoView.setAnimationHandler({ [weak self] view in
+                guard let self = self else { return }
+                view.alpha = self.hideBottom ? 0.0 : 1.0
             }).anchors {
-                Anchors(.top).equalTo("scroller", attribute: .bottom)
-                Anchors.shoe()
                 if hideBottom {
-                    Anchors(.height).equalTo(constant: .zero)
+                    Anchors(.top).equalTo(view.bottomAnchor)
+                    Anchors.horizontal()
+                } else {
+                    Anchors(.top).equalTo("scroller", attribute: .bottom)
+                    Anchors.shoe()
                 }
             }
         }
